@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Project</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./img/tabIco.png">
+    <script src="https://kit.fontawesome.com/b085b0a4e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="">
+        <button>
+            <i id="icon" class="fas fa-arrow-left"></i>
+        </button>
+        <h1 class="tgl">Chat Project</h1>
+        <h3 class="tgl">Choose a chatroom</h3>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="navTab"><a id="General" href="#">#general</a></li>
+            <li class="navTab"><a id="Js" href="#">#js</a></li>
+            <li class="navTab"><a id="Homeworks" href="#">#homeworks</a></li>
+            <li class="navTab"><a id="Test" href="#">#test</a></li>
+        </ul>
+    </nav>
+
+    <div id="chatPaper">
+        <ul id="chat"></ul>
+    </div>
+
+    <form onkeypress="return event.keyCode != 13">
+        <input type="datetime-local" id="startTime">
+        <input type="datetime-local" id="endTime">
+        <input type="button" value="Filter" id="timeBtn">
+        <br>
+        <textarea placeholder="Your message" id="msgTxt" class="msgInp"></textarea>
+        <input type="button" value="Send" id="sendBtn">
+        <br>
+        <input type="text" placeholder="Update username" id="userNameInp">
+        <input type="button" value="Update" id="userNameBtn">
+        <br>
+        <input type="color" value="#ffffff" id="colorInp">
+        <input type="button" value="Paint" id="colorBtn">
+    </form>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script> 
+
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyD8SomX_KTV2AXsH0p7XwJZw9aQRH4TOcA",
+          authDomain: "itbootcamp-9d648.firebaseapp.com",
+          projectId: "itbootcamp-9d648",
+          storageBucket: "itbootcamp-9d648.appspot.com",
+          messagingSenderId: "592454721782",
+          appId: "1:592454721782:web:503303882f4ea2477bccd7",
+          measurementId: "G-02QB0XV13D"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
