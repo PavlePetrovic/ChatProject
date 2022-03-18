@@ -2,6 +2,8 @@
 
 Simple chat app created with JavaScript and Firebase
 
+Take a look: [a link](https://itbootcamp-9d648.web.app/)
+
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
